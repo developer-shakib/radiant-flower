@@ -79,18 +79,21 @@ function HomePage() {
 
 
       {/* PILLARS */}
-      <section className="relative py-14 bg-white">
-        <img src={flowersLeft} alt="" className="absolute left-0 top-0 h-full w-56 object-cover opacity-90 hidden md:block" width={224} height={200} />
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative">
-          {PILLARS.map((p) => (
-            <div key={p.title} className="text-center">
-              <p.icon className="w-9 h-9 mx-auto text-[#E91E63]" strokeWidth={1.5} />
-              <h3 className="mt-4 font-semibold text-[#2b2129]">{p.title}</h3>
-              <p className="text-sm text-[#6b5560] mt-1 max-w-[160px] mx-auto">{p.text}</p>
-            </div>
-          ))}
+      <section className="relative py-14 bg-[linear-gradient(90deg,#fde3d4_0%,#fdece0_25%,#fff4ea_60%,#fff6ef_100%)] overflow-hidden">
+        <img src={flowersLeft} alt="" className="absolute left-0 top-1/2 -translate-y-1/2 h-full w-64 object-contain object-left pointer-events-none hidden md:block" width={256} height={220} />
+        <div className="max-w-6xl mx-auto px-6 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 md:divide-x md:divide-[#f2c7d4]">
+            {PILLARS.map((p) => (
+              <div key={p.title} className="text-center px-6 py-2">
+                <p.icon className="w-10 h-10 mx-auto text-[#E91E63]" strokeWidth={1.25} />
+                <h3 className="mt-4 font-semibold text-[#2b2129] tracking-wide">{p.title}</h3>
+                <p className="text-sm text-[#6b5560] mt-2 max-w-[160px] mx-auto leading-relaxed">{p.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* BLOSSOM */}
       <section className="py-16 bg-[linear-gradient(180deg,#ffffff,#fff6f0)]">
