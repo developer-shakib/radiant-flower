@@ -137,11 +137,13 @@ function HomePage() {
             <p className="mt-3 text-lg text-[#2b2129] font-medium">
               Wellness guide, dancer & storyteller
             </p>
-            <p className="mt-5 text-[#6b5560] leading-relaxed">
-              From Siberia to Bermuda, my journey has been one of transformation, healing and joy.
-              I teach women to reconnect with their bodies, awaken their inner radiance and
-              celebrate life at every age through Qigong, dance and sisterhood.
-            </p>
+            <div className="mt-5 space-y-4 text-[#6b5560] leading-relaxed text-sm">
+              <p>Six years ago, I was the happiest woman on the planet. I was living in beautiful Bermuda and was ready to start a new career as a Wellness Coach. I was going to get married to a wonderful man. Healthy, toned, active, energetic, and cheerful, I laughed at my age. I was 52 years old.</p>
+              <p>Two weeks before my wedding, I was diagnosed with uterine cancer, stage 3. In this one brutal moment, my entire life was split into two parts: before and after.</p>
+              <p>It was my choice not to be a victim of my situation, but a winner. I wanted not only survive, but thrive. I began to search, to learn, to practice the ways to improve my health and regain my energy.</p>
+              <p>My healing journey was long and arduous, but also truly powerful and transformational.</p>
+              <p>From these ashes, like the Phoenix, I slowly unfolded wings I never knew I had and flew high above the ruins of my dreams. I grew into a strong, happy and confident woman that have experience, passion, and knowledge to help other women.</p>
+            </div>
             <Link
               to="/about"
               className="inline-block mt-7 rf-gradient-bg text-white text-xs tracking-[0.2em] font-semibold px-8 py-4 rounded-md shadow-lg hover:opacity-90 transition"
