@@ -9,6 +9,7 @@ import onlineImg from "@/assets/online.jpg";
 import shopImg from "@/assets/shop.jpg";
 import journalImg from "@/assets/journal.jpg";
 import bookAsset from "@/assets/nina-book.png.asset.json";
+import aboutNina from "@/assets/about-nina.jpg.asset.json";
 import nina from "@/assets/nina.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
@@ -93,6 +94,43 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+
+      {/* ABOUT */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 rf-gradient-bg opacity-20 rounded-3xl blur-2xl" />
+            <img
+              src={aboutNina.url}
+              alt="Nina London"
+              className="relative rounded-2xl shadow-xl w-full h-[520px] object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p className="font-script text-2xl text-[#FFB904]">About me</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2 leading-tight">
+              Hi, I'm Nina London
+            </h2>
+            <p className="mt-3 text-lg text-[#2b2129] font-medium">
+              Wellness guide, dancer & storyteller
+            </p>
+            <p className="mt-5 text-[#6b5560] leading-relaxed">
+              From Siberia to Bermuda, my journey has been one of transformation, healing and joy.
+              I teach women to reconnect with their bodies, awaken their inner radiance and
+              celebrate life at every age through Qigong, dance and sisterhood.
+            </p>
+            <Link
+              to="/about"
+              className="inline-block mt-7 rf-gradient-bg text-white text-xs tracking-[0.2em] font-semibold px-8 py-4 rounded-md shadow-lg hover:opacity-90 transition"
+            >
+              LEARN MORE
+            </Link>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* BLOSSOM */}
