@@ -8,7 +8,7 @@ import retreatsImg from "@/assets/retreats.jpg";
 import onlineImg from "@/assets/online.jpg";
 import shopImg from "@/assets/shop.jpg";
 import journalImg from "@/assets/journal.jpg";
-import book from "@/assets/book.png";
+import bookAsset from "@/assets/nina-book.png.asset.json";
 import nina from "@/assets/nina.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
