@@ -62,26 +62,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.25 0.02 350);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.25 0.02 350);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.25 0.02 350);
+  --primary: oklch(0.62 0.22 350);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.97 0.02 30);
+  --secondary-foreground: oklch(0.35 0.15 30);
+  --muted: oklch(0.97 0.01 30);
+  --muted-foreground: oklch(0.5 0.03 340);
+  --accent: oklch(0.78 0.19 55);
+  --accent-foreground: oklch(0.25 0.02 350);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.93 0.02 340);
+  --input: oklch(0.93 0.02 340);
+  --ring: oklch(0.62 0.22 350);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,6 +95,16 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  --rf-amaranth: #E91E63;
+  --rf-magenta: #FF80B4;
+  --rf-orange: #FFB904;
+  --rf-yellow: #FFEF03;
+  --rf-aqua: #7BEDE0;
+  --rf-ink: #2b2129;
+  --rf-cream: #fff6ef;
+  --rf-gradient: linear-gradient(90deg, #E91E63 0%, #FF80B4 35%, #FFB904 100%);
+  --rf-gradient-soft: linear-gradient(135deg, #fff0f5 0%, #fff6ef 50%, #fffaf0 100%);
 }
 
 .dark {
@@ -139,6 +149,26 @@
 
   body {
     background-color: var(--color-background);
-    color: var(--color-foreground);
+    color: var(--rf-ink);
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .rf-gradient-text {
+    background: var(--rf-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rf-gradient-bg {
+    background: var(--rf-gradient);
   }
 }
