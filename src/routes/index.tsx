@@ -193,14 +193,14 @@ function HomePage() {
             </p>
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-8">
-            {COURSES.map((c, i) => (
-              <div key={c.title} className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition group">
-                <div className="h-48 relative flex items-center justify-center" style={{ background: c.tint }}>
-                  <span className="font-display text-6xl text-white/90 drop-shadow">0{i + 1}</span>
+            {COURSES.map((c) => (
+              <div key={c.title} className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition group flex flex-col">
+                <div className="h-56 overflow-hidden bg-[#fff6f0]">
+                  <img src={c.img} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
-                <div className="p-7 text-center">
+                <div className="p-7 text-center flex-1 flex flex-col">
                   <h3 className="font-display text-2xl text-[#2b2129]">{c.title}</h3>
-                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{c.text}</p>
+                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed flex-1">{c.text}</p>
                   <Link to="/online-programs" className="inline-block mt-5 text-[10px] tracking-[0.2em] font-semibold text-[#E91E63] hover:text-[#c2185b]">
                     LEARN MORE →
                   </Link>
