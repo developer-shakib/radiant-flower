@@ -46,42 +46,114 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="bg-[#fff6ef]">
-      <div className="bg-[linear-gradient(90deg,#fff0f5,#fff6ef,#fffaf0)] py-10 border-t border-[#f5e6ee]">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 items-center gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full rf-gradient-bg flex items-center justify-center">
-              <Mail className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <p className="font-display text-lg text-[#E91E63]">Let’s stay connected</p>
-              <p className="text-sm text-[#6b5560]">Get inspiration, love letters and events<br/>sent to your soul.</p>
-            </div>
+    <footer className="relative bg-[#1a0f18] text-[#e8dde4] overflow-hidden">
+      {/* decorative gradient glow */}
+      <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,#E91E63,#FFB904,transparent)]" />
+      <div aria-hidden className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[#E91E63]/20 blur-3xl" />
+      <div aria-hidden className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[#FFB904]/10 blur-3xl" />
+
+      {/* NEWSLETTER */}
+      <div className="relative border-b border-white/5">
+        <div className="max-w-6xl mx-auto px-6 py-14 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <p className="font-script text-3xl text-[#FF80B4]">Stay connected</p>
+            <h3 className="font-display text-3xl md:text-4xl text-white mt-1">Love letters to your soul</h3>
+            <p className="mt-3 text-sm text-[#c9b8c3] max-w-md">
+              Inspiration, upcoming retreats and gentle guidance — delivered a few times a month, never spam.
+            </p>
           </div>
-          <form className="flex gap-2 w-full" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Your email"
-              className="flex-1 px-4 py-3 rounded-md border border-[#f0d5e0] bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#FF80B4]"
-            />
-            <button className="rf-gradient-bg text-white text-xs tracking-[0.15em] font-semibold px-6 py-3 rounded-md">
-              JOIN US
-            </button>
+          <form className="w-full" onSubmit={(e) => e.preventDefault()}>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
+                className="flex-1 px-5 py-4 rounded-md bg-white/5 border border-white/10 text-sm text-white placeholder:text-[#a89aa2] focus:outline-none focus:ring-2 focus:ring-[#E91E63] focus:border-transparent"
+              />
+              <button className="rf-gradient-bg text-white text-xs tracking-[0.2em] font-semibold px-8 py-4 rounded-md shadow-lg hover:opacity-90 transition">
+                SUBSCRIBE
+              </button>
+            </div>
+            <p className="mt-3 text-xs text-[#8a7a83]">By subscribing you agree to our privacy policy.</p>
           </form>
-          <div className="flex md:justify-end gap-4 text-[#c74e88]">
-            <a href="#" aria-label="Facebook"><Facebook className="w-5 h-5" /></a>
-            <a href="#" aria-label="Instagram"><Instagram className="w-5 h-5" /></a>
-            <a href="#" aria-label="YouTube"><Youtube className="w-5 h-5" /></a>
-            <a href="#" aria-label="Email"><Mail className="w-5 h-5" /></a>
-          </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] tracking-[0.15em] text-[#6b5560]">
-        <p>© 2025 Radiant Flower</p>
-        <div className="flex flex-wrap justify-center gap-5">
-          {NAV.slice(1).map((n) => (
-            <Link key={n.to} to={n.to} className="hover:text-[#E91E63]">{n.label}</Link>
-          ))}
+
+      {/* MAIN */}
+      <div className="relative max-w-6xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-12">
+        {/* brand */}
+        <div className="md:col-span-4">
+          <Link to="/" className="inline-flex items-center gap-3">
+            <img src={logo} alt="Nina London" className="h-14 w-auto" width={112} height={112} />
+            <span className="font-display text-xl text-white leading-tight">Nina London<br/><span className="font-script text-[#FF80B4] text-lg">Radiant Flower</span></span>
+          </Link>
+          <p className="mt-5 text-sm leading-relaxed text-[#c9b8c3] max-w-sm">
+            Qi Gong, meditation and laughter yoga for women who want to live with vitality, joy and purpose.
+          </p>
+          <div className="mt-6 flex gap-3">
+            {[
+              { icon: Facebook, href: "#", label: "Facebook" },
+              { icon: Instagram, href: "#", label: "Instagram" },
+              { icon: Youtube, href: "#", label: "YouTube" },
+              { icon: Mail, href: "mailto:hello@ninalondon.com", label: "Email" },
+            ].map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-[#FF80B4] hover:bg-[#E91E63] hover:text-white hover:border-[#E91E63] transition"
+              >
+                <Icon className="w-4 h-4" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* explore */}
+        <div className="md:col-span-3">
+          <h4 className="text-xs tracking-[0.25em] font-semibold text-white/60 mb-5">EXPLORE</h4>
+          <ul className="space-y-3 text-sm">
+            {NAV.slice(0, 4).map((n) => (
+              <li key={n.to}>
+                <Link to={n.to} className="text-[#c9b8c3] hover:text-[#FF80B4] transition-colors">{n.label.charAt(0) + n.label.slice(1).toLowerCase()}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* offerings */}
+        <div className="md:col-span-3">
+          <h4 className="text-xs tracking-[0.25em] font-semibold text-white/60 mb-5">OFFERINGS</h4>
+          <ul className="space-y-3 text-sm">
+            {NAV.slice(4).map((n) => (
+              <li key={n.to}>
+                <Link to={n.to} className="text-[#c9b8c3] hover:text-[#FF80B4] transition-colors">{n.label.charAt(0) + n.label.slice(1).toLowerCase()}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* contact */}
+        <div className="md:col-span-2">
+          <h4 className="text-xs tracking-[0.25em] font-semibold text-white/60 mb-5">CONTACT</h4>
+          <ul className="space-y-3 text-sm text-[#c9b8c3]">
+            <li>Bermuda</li>
+            <li>
+              <a href="mailto:hello@ninalondon.com" className="hover:text-[#FF80B4] transition-colors">hello@ninalondon.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="relative border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#8a7a83]">
+          <p>© {new Date().getFullYear()} Nina London. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="#" className="hover:text-[#FF80B4] transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-[#FF80B4] transition-colors">Terms</a>
+            <a href="#" className="hover:text-[#FF80B4] transition-colors">Cookies</a>
+          </div>
         </div>
       </div>
     </footer>
