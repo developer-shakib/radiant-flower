@@ -45,11 +45,15 @@ function HomePage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="relative min-h-[92vh] overflow-hidden bg-[linear-gradient(120deg,#fff0f5_0%,#fff6ef_45%,#fffaf0_100%)]">
-        <div className="absolute inset-0">
-          <img src={hero} alt="" className="absolute right-0 top-0 h-full w-[62%] object-cover object-center" width={1280} height={1280} />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,#fff0f5_0%,#fff0f5_25%,rgba(255,240,245,0)_50%)]" />
-        </div>
+      <section className="relative min-h-[92vh] overflow-hidden">
+        <img
+          src={hero}
+          alt="Nina London holding a lotus flower by the Bermuda coast"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          width={1600}
+          height={1104}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,240,245,0.92)_0%,rgba(255,240,245,0.6)_35%,rgba(255,240,245,0)_60%)]" />
         <div className="relative max-w-7xl mx-auto px-6 pt-40 pb-16">
           <div className="max-w-xl">
             <h1 className="font-display text-6xl md:text-7xl leading-[1.05] rf-gradient-text">
@@ -70,6 +74,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* PILLARS */}
       <section className="relative py-14 bg-white">
