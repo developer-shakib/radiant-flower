@@ -49,10 +49,12 @@ function HomePage() {
         <img
           src={hero}
           alt="Nina London holding a lotus flower by the Bermuda coast"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "75% center" }}
           width={1600}
           height={1104}
         />
+
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,240,245,0.92)_0%,rgba(255,240,245,0.6)_35%,rgba(255,240,245,0)_60%)]" />
         <div className="relative max-w-7xl mx-auto px-6 pt-40 pb-16">
           <div className="max-w-xl">
