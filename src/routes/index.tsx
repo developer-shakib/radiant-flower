@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, Sun, Sparkles, Flower2, Wind, Smile, Brain } from "lucide-react";
+import { Heart, Sun, Sparkles, Flower2 } from "lucide-react";
+import qiQigong from "@/assets/qi-qigong.jpg";
+import qiLaughing from "@/assets/qi-laughing.jpg";
+import qiMeditation from "@/assets/qi-meditation.jpg";
 import { SiteLayout } from "@/components/site-layout";
 import hero from "@/assets/hero.jpg";
 import flowersLeft from "@/assets/flowers-left.png";
@@ -211,16 +214,16 @@ function HomePage() {
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {[
-              { icon: Wind, title: "Qigong", text: "Qi Gong (energy work) is an ancient 5000 years old Chinese practice system that combines fluid movements harmonized with deep breathing, postures, and focused intention." },
-              { icon: Smile, title: "Laughing Yoga", text: "You will learn how to stay positive with wonderful Laughter Yoga. We will do simple laughter exercises and deep breathing to feel happy, elevate mood, reduce anxiety and stress, cope with sadness, and boost immune system." },
-              { icon: Brain, title: "Meditation", text: "Together we will start a powerful journey of using ancient wisdom of the Inner Smile and the Six Healing Sounds meditations to calm your mind, transform negative emotions (fears, sadness, anxiety, anger) into positive ones." },
+              { img: qiQigong, title: "Qigong", text: "Qi Gong (energy work) is an ancient 5000 years old Chinese practice system that combines fluid movements harmonized with deep breathing, postures, and focused intention." },
+              { img: qiLaughing, title: "Laughing Yoga", text: "You will learn how to stay positive with wonderful Laughter Yoga. We will do simple laughter exercises and deep breathing to feel happy, elevate mood, reduce anxiety and stress, cope with sadness, and boost immune system." },
+              { img: qiMeditation, title: "Meditation", text: "Together we will start a powerful journey of using ancient wisdom of the Inner Smile and the Six Healing Sounds meditations to calm your mind, transform negative emotions (fears, sadness, anxiety, anger) into positive ones." },
             ].map((q) => (
-              <div key={q.title} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition text-center">
-                <div className="w-16 h-16 mx-auto rounded-full rf-gradient-bg flex items-center justify-center shadow-md">
-                  <q.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+              <div key={q.title} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition text-center">
+                <img src={q.img} alt={q.title} loading="lazy" width={768} height={768} className="w-full h-56 object-cover" />
+                <div className="p-8">
+                  <h3 className="font-display text-2xl text-[#2b2129]">{q.title}</h3>
+                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{q.text}</p>
                 </div>
-                <h3 className="mt-5 font-display text-2xl text-[#2b2129]">{q.title}</h3>
-                <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{q.text}</p>
               </div>
             ))}
           </div>
