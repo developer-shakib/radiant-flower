@@ -108,11 +108,9 @@ function HomePage() {
               <Link key={c.tag} to={c.to} className="group rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-lg transition">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <img src={c.img} alt={c.tag} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width={400} height={520} loading="lazy" />
-                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full flex items-center justify-center shadow-md" style={{ background: c.tint }}>
-                    <Flower2 className="w-5 h-5 text-white" />
-                  </div>
                 </div>
-                <div className="pt-8 pb-5 px-3 text-center">
+                <div className="pt-5 pb-5 px-3 text-center">
+
                   <p className="text-[11px] tracking-[0.15em] font-semibold text-[#2b2129]">{c.tag}</p>
                   <p className="text-xs text-[#6b5560] mt-2 leading-snug">{c.title}</p>
                   <p className="mt-3 text-[10px] tracking-[0.2em] font-semibold text-[#E91E63]">LEARN MORE →</p>
