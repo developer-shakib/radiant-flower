@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, Sun, Sparkles, Flower2 } from "lucide-react";
+import { Heart, Sun, Sparkles, Flower2, Wind, Smile, Brain } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import hero from "@/assets/hero.jpg";
 import flowersLeft from "@/assets/flowers-left.png";
@@ -192,6 +192,36 @@ function HomePage() {
                   <p className="mt-3 text-[10px] tracking-[0.2em] font-semibold text-[#E91E63]">LEARN MORE →</p>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QI GONG FOR WOMEN */}
+      <section className="py-20 bg-[linear-gradient(180deg,#ffffff,#fff6f0)]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-script text-2xl text-[#FFB904]">Ancient practices</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2">Qi Gong for Women</h2>
+            <div className="w-16 h-px bg-[#E91E63] mx-auto mt-4" />
+            <p className="mt-5 text-[#6b5560] leading-relaxed">
+              Time-tested practices that awaken your energy, calm your mind and reconnect
+              you with the joyful, radiant woman within.
+            </p>
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {[
+              { icon: Wind, title: "Qigong", text: "Qi Gong (energy work) is an ancient 5000 years old Chinese practice system that combines fluid movements harmonized with deep breathing, postures, and focused intention." },
+              { icon: Smile, title: "Laughing Yoga", text: "You will learn how to stay positive with wonderful Laughter Yoga. We will do simple laughter exercises and deep breathing to feel happy, elevate mood, reduce anxiety and stress, cope with sadness, and boost immune system." },
+              { icon: Brain, title: "Meditation", text: "Together we will start a powerful journey of using ancient wisdom of the Inner Smile and the Six Healing Sounds meditations to calm your mind, transform negative emotions (fears, sadness, anxiety, anger) into positive ones." },
+            ].map((q) => (
+              <div key={q.title} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition text-center">
+                <div className="w-16 h-16 mx-auto rounded-full rf-gradient-bg flex items-center justify-center shadow-md">
+                  <q.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                </div>
+                <h3 className="mt-5 font-display text-2xl text-[#2b2129]">{q.title}</h3>
+                <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{q.text}</p>
+              </div>
             ))}
           </div>
         </div>
