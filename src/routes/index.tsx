@@ -8,7 +8,7 @@ import retreatsImg from "@/assets/retreats.jpg";
 import onlineImg from "@/assets/online.jpg";
 import shopImg from "@/assets/shop.jpg";
 import journalImg from "@/assets/journal.jpg";
-import book from "@/assets/book.png";
+import bookAsset from "@/assets/nina-book.png.asset.json";
 import nina from "@/assets/nina.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
@@ -164,21 +164,18 @@ function HomePage() {
       </section>
 
       {/* BOOK */}
-      <section className="relative py-16 overflow-hidden bg-[linear-gradient(90deg,#ffe6ef,#ffefe0)]">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[280px_1fr_auto] gap-10 items-center">
-          <img src={book} alt="From Siberia to Bermuda" className="w-64 mx-auto drop-shadow-2xl" width={280} height={380} loading="lazy" />
+      <section className="relative py-20 overflow-hidden bg-[linear-gradient(90deg,#ffe6ef,#ffefe0)]">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[380px_1fr] gap-12 items-center">
+          <img src={bookAsset.url} alt="Nina's Book — From Siberia to Bermuda" className="w-full max-w-sm mx-auto drop-shadow-2xl" loading="lazy" />
           <div>
             <p className="font-script text-2xl text-[#E91E63]">My book</p>
-            <h3 className="font-display text-3xl text-[#2b2129] mt-1">From Siberia to Bermuda.<br/>Live. Love. Laugh.</h3>
-            <p className="mt-3 text-[#6b5560] max-w-md">A true story of resilience, healing and finding joy after cancer.</p>
-            <button className="mt-5 border border-[#E91E63] text-[#E91E63] text-xs tracking-[0.15em] font-semibold px-6 py-3 rounded-md hover:bg-[#E91E63] hover:text-white transition">
-              LEARN MORE
+            <h3 className="font-display text-4xl text-[#2b2129] mt-1 leading-tight">Nina's Book<br/><span className="text-[#00B8B8]">From Siberia to Bermuda</span></h3>
+            <blockquote className="mt-5 text-[#6b5560] italic leading-relaxed max-w-xl border-l-2 border-[#E91E63]/40 pl-5">
+              «I am like a rolling stone trying so many continents and countries during my life. It is inexplicable why I have such an irresistible desire for change and the unknown. I would often question myself, "Why am I doing this?" There was no guarantee that I would survive, let alone be successful. But, I kept going and didn't look back. I kept listening and trusting my inner voice and had great faith and unshakeable confidence that I was doing the right things. I didn't want to wake up one morning in Siberia, look back in despair, and regret missed opportunities. I would never have forgiven myself if I didn't try. My great craving for change outweighed my fear of the unknown.»
+            </blockquote>
+            <button className="mt-6 bg-[#E91E63] text-white text-xs tracking-[0.2em] font-semibold px-8 py-3 rounded-md hover:bg-[#c2185b] transition shadow-lg">
+              BUY NOW
             </button>
-          </div>
-          <div className="hidden md:block relative">
-            <img src={nina} alt="Nina London" className="w-72 h-96 object-cover rounded-lg shadow-lg" width={288} height={384} loading="lazy" />
-            <p className="absolute -left-32 top-8 font-script text-xl text-[#E91E63] max-w-[180px] italic">“A story that will make you laugh, cry and believe in the power of a radiant life.”</p>
-            <p className="absolute -left-16 bottom-10 font-script text-2xl text-[#E91E63]">Nina ♡</p>
           </div>
         </div>
       </section>
