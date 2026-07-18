@@ -346,6 +346,58 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-[linear-gradient(180deg,#fff6ef,#fff0f5)]">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center">
+            <p className="font-script text-2xl text-[#FFB904]">Good to know</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2">Frequently Asked Questions</h2>
+            <div className="w-16 h-px bg-[#E91E63] mx-auto mt-4" />
+            <p className="mt-5 text-[#6b5560]">Everything you need to know before joining a class or retreat.</p>
+          </div>
+          <div className="mt-10 space-y-4">
+            {[
+              {
+                q: "Do I need any experience to join a Qi Gong class?",
+                a: "Not at all. My classes are designed for absolute beginners as well as experienced practitioners. Every movement is gentle, slow and easy to follow — just come with an open heart and comfortable clothes.",
+              },
+              {
+                q: "Is Qi Gong suitable for women over 50?",
+                a: "Absolutely — it is one of the most beautiful practices for women in midlife and beyond. Qi Gong is low-impact, deeply healing and helps restore energy, flexibility, balance and inner calm at any age.",
+              },
+              {
+                q: "Can I practice if I have a health condition or am recovering from illness?",
+                a: "Yes. My Healing Vibes class was created especially for cancer patients, survivors and their families. Movements can always be modified — but if you have serious concerns, please check with your doctor first.",
+              },
+              {
+                q: "What do I need to bring to a class?",
+                a: "Just yourself, comfortable clothing, a water bottle, and an open mind. No mats, props or special equipment required. For online classes, all you need is a quiet corner and space to stretch your arms.",
+              },
+              {
+                q: "How do I book a class or retreat?",
+                a: "You can book directly through the Classes or Retreats pages, or reach out via the Contact page. I personally reply to every enquiry and will help you find the perfect fit for your journey.",
+              },
+            ].map((item, i) => (
+              <details
+                key={i}
+                className="group bg-white rounded-2xl border border-[#f5e0ec] shadow-sm hover:shadow-md transition overflow-hidden"
+              >
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none">
+                  <span className="font-display text-lg text-[#2b2129]">{item.q}</span>
+                  <span className="shrink-0 w-8 h-8 rounded-full rf-gradient-bg flex items-center justify-center text-white text-lg font-light transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-[#6b5560] leading-relaxed text-sm">
+                  {item.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </SiteLayout>
   );
 }
