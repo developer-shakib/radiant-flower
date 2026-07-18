@@ -18,8 +18,9 @@ export function Header() {
   return (
     <header className="absolute top-0 left-0 right-0 z-30">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
-        <Link to="/" className="shrink-0">
-          <img src={logo} alt="Radiant Flower" className="h-14 w-auto" width={112} height={112} />
+        <Link to="/" className="shrink-0 flex items-center gap-3">
+          <img src={logo} alt="Nina London" className="h-20 w-auto" width={160} height={160} />
+          <span className="hidden sm:block font-display text-xl text-[#2b2129] leading-tight">Nina London<br/><span className="font-script text-[#E91E63] text-base">Radiant Flower</span></span>
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-[11px] tracking-[0.15em] font-medium text-[#2b2129]">
           {NAV.map((n) => (
@@ -84,8 +85,8 @@ export function Footer() {
         {/* brand */}
         <div className="md:col-span-4">
           <Link to="/" className="inline-flex items-center gap-3">
-            <img src={logo} alt="Nina London" className="h-14 w-auto" width={112} height={112} />
-            <span className="font-display text-xl text-white leading-tight">Nina London<br/><span className="font-script text-[#FF80B4] text-lg">Radiant Flower</span></span>
+            <img src={logo} alt="Nina London" className="h-20 w-auto" width={160} height={160} />
+            <span className="font-display text-xl text-white leading-tight">Nina London<br/><span className="font-script text-[#FF80B4] text-base">Radiant Flower</span></span>
           </Link>
           <p className="mt-5 text-sm leading-relaxed text-[#c9b8c3] max-w-sm">
             Qi Gong, meditation and laughter yoga for women who want to live with vitality, joy and purpose.
