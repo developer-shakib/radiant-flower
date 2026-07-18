@@ -50,7 +50,7 @@ function HomePage() {
           src={hero}
           alt="Nina London holding a lotus flower by the Bermuda coast"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "75% center" }}
+          style={{ objectPosition: "95% center" }}
           width={1600}
           height={1104}
         />
