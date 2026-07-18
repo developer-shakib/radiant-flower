@@ -326,6 +326,26 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* VIDEO */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-script text-2xl text-[#E91E63]">Watch & practice</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2">A moment with Nina</h2>
+            <div className="w-16 h-px bg-[#E91E63] mx-auto mt-4" />
+          </div>
+          <div className="mt-10 relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-[#E91E63]/10">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/JeQcTvSqMDs"
+              title="Nina London — YouTube video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
     </SiteLayout>
   );
 }
