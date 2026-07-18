@@ -14,6 +14,9 @@ import nina from "@/assets/nina.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
 import t3 from "@/assets/t3.jpg";
+import courseCalming from "@/assets/course-calming.jpg.asset.json";
+import courseHealing from "@/assets/course-healing.png.asset.json";
+import courseLaugh from "@/assets/course-laugh.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -41,9 +44,21 @@ const TESTIMONIALS = [
 ];
 
 const COURSES = [
-  { title: "Calming the Waters", text: "Soothing Qigong practices to release stress, quiet the mind and restore inner balance.", tint: "linear-gradient(135deg,#7ec8e3,#b5e0f0)" },
-  { title: "Healing Vibes", text: "Gentle movement, breath and sound to heal the body and awaken your natural radiance.", tint: "linear-gradient(135deg,#E91E63,#FF80B4)" },
-  { title: "Time to Laugh", text: "Joyful laughter yoga and playful dance to lift your spirit and reconnect with happiness.", tint: "linear-gradient(135deg,#FFB904,#ffd76b)" },
+  {
+    img: courseCalming.url,
+    title: "Calming the Waters",
+    text: "Qi Gong moving and breathing meditation signature class will help you to calm yourself down, cope with stress and relieve anxiety, connect your mind and body and balance them together, release negative emotions and tension that are held inside you. You will feel peaceful and relaxed after the class. It can even help put a smile on your face.",
+  },
+  {
+    img: courseHealing.url,
+    title: "Healing Vibes",
+    text: "This class I designed for cancer patients, survivors, their families and caregivers. It will help you to stay strong, energetic and optimistic during difficult times. You will learn how to restore energy during and after cancer treatments, to cope with stress, and release negative emotions (fear, worries, anger, and sadness).",
+  },
+  {
+    img: courseLaugh.url,
+    title: "Time to Laugh",
+    text: "In this class we will do simple laughing and deep breathing exercises. We will also dance! Our bodies cannot differentiate between real laughter and forced laughter. If you just keep laughing, endorphins flood the body and stress and anxiety recedes. Nothing works faster to feel much happier than a good laugh.",
+  },
 ];
 
 const PRESS = ["The Royal Gazette", "BERMUDA", "Daily Sun", "GOOD MORNING BERMUDA", "Reach", "VoyageLA"];
@@ -178,14 +193,14 @@ function HomePage() {
             </p>
           </div>
           <div className="mt-12 grid md:grid-cols-3 gap-8">
-            {COURSES.map((c, i) => (
-              <div key={c.title} className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition group">
-                <div className="h-48 relative flex items-center justify-center" style={{ background: c.tint }}>
-                  <span className="font-display text-6xl text-white/90 drop-shadow">0{i + 1}</span>
+            {COURSES.map((c) => (
+              <div key={c.title} className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition group flex flex-col">
+                <div className="h-56 overflow-hidden bg-[#fff6f0]">
+                  <img src={c.img} alt={c.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
-                <div className="p-7 text-center">
+                <div className="p-7 text-center flex-1 flex flex-col">
                   <h3 className="font-display text-2xl text-[#2b2129]">{c.title}</h3>
-                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{c.text}</p>
+                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed flex-1">{c.text}</p>
                   <Link to="/online-programs" className="inline-block mt-5 text-[10px] tracking-[0.2em] font-semibold text-[#E91E63] hover:text-[#c2185b]">
                     LEARN MORE →
                   </Link>
