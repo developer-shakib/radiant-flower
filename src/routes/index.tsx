@@ -159,6 +159,37 @@ function HomePage() {
         </div>
       </section>
 
+      {/* COURSES */}
+      <section className="py-20 bg-[linear-gradient(180deg,#fff6f0,#ffffff)]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-script text-2xl text-[#FFB904]">Grow with me</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2">Courses</h2>
+            <div className="w-16 h-px bg-[#E91E63] mx-auto mt-4" />
+            <p className="mt-5 text-[#6b5560] leading-relaxed">
+              Guided online journeys designed to help you heal, balance and celebrate life —
+              practice from anywhere, at your own pace.
+            </p>
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
+            {COURSES.map((c, i) => (
+              <div key={c.title} className="rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition group">
+                <div className="h-48 relative flex items-center justify-center" style={{ background: c.tint }}>
+                  <span className="font-display text-6xl text-white/90 drop-shadow">0{i + 1}</span>
+                </div>
+                <div className="p-7 text-center">
+                  <h3 className="font-display text-2xl text-[#2b2129]">{c.title}</h3>
+                  <p className="mt-3 text-sm text-[#6b5560] leading-relaxed">{c.text}</p>
+                  <Link to="/online-programs" className="inline-block mt-5 text-[10px] tracking-[0.2em] font-semibold text-[#E91E63] hover:text-[#c2185b]">
+                    LEARN MORE →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
