@@ -40,6 +40,12 @@ const TESTIMONIALS = [
   { img: t3, text: "Every class is filled with joy, beauty and deep feminine energy.", name: "Valerie, Boston" },
 ];
 
+const COURSES = [
+  { title: "Calming the Waters", text: "Soothing Qigong practices to release stress, quiet the mind and restore inner balance.", tint: "linear-gradient(135deg,#7ec8e3,#b5e0f0)" },
+  { title: "Healing Vibes", text: "Gentle movement, breath and sound to heal the body and awaken your natural radiance.", tint: "linear-gradient(135deg,#E91E63,#FF80B4)" },
+  { title: "Time to Laugh", text: "Joyful laughter yoga and playful dance to lift your spirit and reconnect with happiness.", tint: "linear-gradient(135deg,#FFB904,#ffd76b)" },
+];
+
 const PRESS = ["The Royal Gazette", "BERMUDA", "Daily Sun", "GOOD MORNING BERMUDA", "Reach", "VoyageLA"];
 
 function HomePage() {
