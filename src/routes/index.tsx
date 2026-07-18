@@ -38,9 +38,24 @@ const CARDS = [
 ];
 
 const TESTIMONIALS = [
-  { img: t1, text: "Nina's classes are a gift. I sleep better, feel lighter and more alive than I have in years.", name: "Gina, Bermuda" },
-  { img: t2, text: "Radiant Flower helped me heal my body and fall in love with myself again.", name: "Lisa, Ontario" },
-  { img: t3, text: "Every class is filled with joy, beauty and deep feminine energy.", name: "Valerie, Boston" },
+  {
+    img: t1,
+    text: "Thank you for another fabulous class with ideas and motions of calming and peaceful ways to cope with stress and worries. Thank you for being a blessing to us and me especially!",
+    name: "Alison",
+    location: "Bermuda",
+  },
+  {
+    img: t2,
+    text: "Using breathing techniques has been extremely helpful in my daily use. Recently I had to have a MRI done and the machine broke down in the middle of my test, and my normal reaction was panic. I quickly remembered that these are the times that I could use the breathing techniques that I had been taught by Nina. I calmly began breathing in through the nose holding the breath and slowly releasing the breath from my mouth, I repeated this over and over until I realized I was concentrating on my refreshed breathing and not the stress that I was finding myself under.",
+    name: "Student",
+    location: "",
+  },
+  {
+    img: t3,
+    text: "I love the Six Healing Sounds Meditation and Nina's comprehensive guidance. It was very informative to learn and practice how we can release our negative emotions.",
+    name: "Patricia",
+    location: "Bermuda",
+  },
 ];
 
 const COURSES = [
@@ -214,24 +229,31 @@ function HomePage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-display text-3xl text-center text-[#E91E63]">What women are saying</h2>
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="font-script text-2xl text-[#FFB904]">Kind words</p>
+            <h2 className="font-display text-4xl md:text-5xl rf-gradient-text mt-2">What women are saying</h2>
+            <div className="w-16 h-px bg-[#E91E63] mx-auto mt-4" />
+            <p className="mt-5 text-[#6b5560] leading-relaxed">
+              Real stories from women who have found peace, healing and joy through our
+              classes, breathing practices and meditations.
+            </p>
+          </div>
+          <div className="mt-12 grid md:grid-cols-3 gap-6 items-start">
             {TESTIMONIALS.map((t) => (
-              <div key={t.name} className="bg-[#fffafc] rounded-lg p-6 shadow-sm flex gap-4">
-                <img src={t.img} alt={t.name} className="w-16 h-16 rounded-full object-cover shrink-0" width={64} height={64} loading="lazy" />
-                <div>
-                  <p className="text-sm text-[#3d323a] italic">“{t.text}”</p>
-                  <p className="mt-3 text-xs text-[#E91E63]">— {t.name}</p>
+              <div key={t.text.slice(0, 20)} className="bg-[#fffafc] rounded-2xl p-7 shadow-sm hover:shadow-md transition flex flex-col">
+                <span className="text-5xl text-[#E91E63]/30 font-display leading-none">“</span>
+                <p className="text-sm text-[#3d323a] italic leading-relaxed -mt-3">{t.text}</p>
+                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-[#f0c8d8]/40">
+                  <img src={t.img} alt={t.name} className="w-12 h-12 rounded-full object-cover shrink-0" width={48} height={48} loading="lazy" />
+                  <div>
+                    <p className="text-sm font-semibold text-[#2b2129]">{t.name}</p>
+                    {t.location && <p className="text-xs text-[#E91E63]">{t.location}</p>}
+                  </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="mt-8 flex justify-center">
-            <Link to="/journal" className="border border-[#f0c8d8] text-[#E91E63] text-xs tracking-[0.15em] font-semibold px-6 py-3 rounded-md hover:bg-[#fff0f5]">
-              READ MORE REVIEWS
-            </Link>
           </div>
         </div>
       </section>
