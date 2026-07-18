@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site-layout";
-import aboutHero from "@/assets/about-hero.jpg.asset.json";
-import bookAsset from "@/assets/nina-book.png.asset.json";
+import aboutHero from "@/assets/about-hero.jpg";
+import bookAsset from "@/assets/nina-book.png";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
 import t3 from "@/assets/t3.jpg";
@@ -45,7 +45,7 @@ function AboutPage() {
       {/* BIO */}
       <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
         <img
-          src={aboutHero.url}
+          src={aboutHero}
           alt="Nina London"
           className="rounded-2xl shadow-xl w-full h-[560px] object-cover"
           width={600}
@@ -69,7 +69,7 @@ function AboutPage() {
       {/* BOOK */}
       <section className="relative py-20 overflow-hidden bg-[linear-gradient(90deg,#ffe6ef,#ffefe0)]">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[380px_1fr] gap-12 items-center">
-          <img src={bookAsset.url} alt="Nina's Book — From Siberia to Bermuda" className="w-full max-w-sm mx-auto drop-shadow-2xl" loading="lazy" />
+          <img src={bookAsset} alt="Nina's Book — From Siberia to Bermuda" className="w-full max-w-sm mx-auto drop-shadow-2xl" loading="lazy" />
           <div>
             <p className="font-script text-2xl text-[#E91E63]">My book</p>
             <h3 className="font-display text-4xl text-[#2b2129] mt-1 leading-tight">Nina's Book<br/><span className="text-[#00B8B8]">From Siberia to Bermuda</span></h3>
