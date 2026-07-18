@@ -11,15 +11,15 @@ import retreatsImg from "@/assets/retreats.jpg";
 import onlineImg from "@/assets/online.jpg";
 import shopImg from "@/assets/shop.jpg";
 import journalImg from "@/assets/journal.jpg";
-import bookAsset from "@/assets/nina-book.png.asset.json";
-import aboutNina from "@/assets/about-nina.jpg.asset.json";
+import bookAsset from "@/assets/nina-book.png";
+import aboutNina from "@/assets/about-nina.jpg";
 import nina from "@/assets/nina.jpg";
 import t1 from "@/assets/t1.jpg";
 import t2 from "@/assets/t2.jpg";
 import t3 from "@/assets/t3.jpg";
-import courseCalming from "@/assets/course-calming.jpg.asset.json";
-import courseHealing from "@/assets/course-healing.png.asset.json";
-import courseLaugh from "@/assets/course-laugh.jpg.asset.json";
+import courseCalming from "@/assets/course-calming.jpg";
+import courseHealing from "@/assets/course-healing.png";
+import courseLaugh from "@/assets/course-laugh.jpg";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -63,17 +63,17 @@ const TESTIMONIALS = [
 
 const COURSES = [
   {
-    img: courseCalming.url,
+    img: courseCalming,
     title: "Calming the Waters",
     text: "Qi Gong moving and breathing meditation signature class will help you to calm yourself down, cope with stress and relieve anxiety, connect your mind and body and balance them together, release negative emotions and tension that are held inside you. You will feel peaceful and relaxed after the class. It can even help put a smile on your face.",
   },
   {
-    img: courseHealing.url,
+    img: courseHealing,
     title: "Healing Vibes",
     text: "This class I designed for cancer patients, survivors, their families and caregivers. It will help you to stay strong, energetic and optimistic during difficult times. You will learn how to restore energy during and after cancer treatments, to cope with stress, and release negative emotions (fear, worries, anger, and sadness).",
   },
   {
-    img: courseLaugh.url,
+    img: courseLaugh,
     title: "Time to Laugh",
     text: "In this class we will do simple laughing and deep breathing exercises. We will also dance! Our bodies cannot differentiate between real laughter and forced laughter. If you just keep laughing, endorphins flood the body and stress and anxiety recedes. Nothing works faster to feel much happier than a good laugh.",
   },
@@ -141,7 +141,7 @@ function HomePage() {
           <div className="relative">
             <div className="absolute -inset-4 rf-gradient-bg opacity-20 rounded-3xl blur-2xl" />
             <img
-              src={aboutNina.url}
+              src={aboutNina}
               alt="Nina London"
               className="relative rounded-2xl shadow-xl w-full h-[520px] object-cover"
               loading="lazy"
@@ -313,7 +313,7 @@ function HomePage() {
       {/* BOOK */}
       <section className="relative py-20 overflow-hidden bg-[linear-gradient(90deg,#ffe6ef,#ffefe0)]">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-[380px_1fr] gap-12 items-center">
-          <img src={bookAsset.url} alt="Nina's Book — From Siberia to Bermuda" className="w-full max-w-sm mx-auto drop-shadow-2xl" loading="lazy" />
+          <img src={bookAsset} alt="Nina's Book — From Siberia to Bermuda" className="w-full max-w-sm mx-auto drop-shadow-2xl" loading="lazy" />
           <div>
             <p className="font-script text-2xl text-[#E91E63]">My book</p>
             <h3 className="font-display text-4xl text-[#2b2129] mt-1 leading-tight">Nina's Book<br/><span className="text-[#00B8B8]">From Siberia to Bermuda</span></h3>
