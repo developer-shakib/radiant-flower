@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Heart, Sun, Sparkles, Flower2 } from "lucide-react";
+import { Heart, Sun, Sparkles, Flower2, Wind, Smile, Brain } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import hero from "@/assets/hero.jpg";
 import flowersLeft from "@/assets/flowers-left.png";
